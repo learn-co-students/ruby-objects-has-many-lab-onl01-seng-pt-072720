@@ -3,13 +3,15 @@ class Artist
 
     attr_accessor :name
     
-    def initialize(name)
+    def initialize(name) # initializes with a name and an array to store all future songs by artist instance
       @name = name
       @songs = []
     end
    
-    def add_song(song)
-      @songs << song
+    def add_song(song) # add a new song to the artists song list and assigned the 
+        song = Song.new(song)
+        
+        @songs << song
       song.artist = self
     end
    
