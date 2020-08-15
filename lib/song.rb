@@ -17,8 +17,10 @@ class Song
     def name 
         @name 
     end 
+    # skip the #name by adding attr_accessor :name 
 
     def artist_name 
         self.artist.name  if self.artist != nil
+        # artist.name if artist 
     end 
 end 
