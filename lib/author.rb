@@ -3,12 +3,11 @@ class Author
 
     def initialize(name)
         @name = name
-        @title = title
     end
 
     def posts
         Post.all.select do |post|
-            post.author = self
+            post.author == self
         end 
     end
 
