@@ -3,11 +3,12 @@ class Author
 
     def initialize(name)
         @name = name
+        @title = title
     end
 
     def posts
         Post.all.select do |post|
-            post.author == self
+            post.author = self
         end 
     end
 
@@ -17,7 +18,7 @@ class Author
 
     def add_post_by_title(title)
         post = Post.new(title)
-        post.author == self
+        post.author = self
     end
 
     def self.post_count
