@@ -15,7 +15,7 @@ attr_accessor :name
 
     def add_post_by_title(title)
         new_post = Post.new(title)
-        new_post.author = self
+        add_post(new_post)
     end
 
     def self.post_count
