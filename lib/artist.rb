@@ -9,10 +9,9 @@ class Artist
     end
    
     def add_song(song) # add a new song to the artists song list and assigned the 
-        song = Song.new(song)
         
         @songs << song
-      song.artist = self
+        song.artist = self
     end
    
     def songs
